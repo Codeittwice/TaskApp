@@ -1,0 +1,15 @@
+.main {
+  width: 100%;
+  height: 100px;
+  background-color: rgb(149, 0, 255);
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  padding-left: 10%;
+}
+.main h1 {
+  text-size-adjust: 100px;
+}

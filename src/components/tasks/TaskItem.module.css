@@ -1,0 +1,55 @@
+.task {
+  display: flex;
+}
+
+.details {
+  margin: auto;
+  width: 50%;
+}
+.details-completed {
+  margin: auto;
+  width: 50%;
+  text-decoration: line-through;
+  color: gray;
+}
+
+.details p {
+  color: grey;
+}
+
+.completion {
+  margin: auto;
+  display: flex;
+  justify-content: right;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.complete-button {
+  padding: 1rem;
+  margin: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  border: 0;
+  background-color: rgb(77, 253, 38);
+  color: white;
+  display: flex;
+}
+.complete-button:hover {
+  background-color: rgb(137, 255, 118);
+}
+
+.complete-button:disabled {
+  background-color: rgb(224, 224, 224);
+}
+.delete-button {
+  padding: 1rem;
+  margin: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+  border: 0;
+  background-color: rgb(255, 63, 63);
+  color: white;
+  display: flex;
+}
+.delete-button:hover {
+  background-color: rgb(253, 104, 104);
+}
