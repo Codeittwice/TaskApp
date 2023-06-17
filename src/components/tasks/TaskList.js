@@ -9,15 +9,13 @@ const TaskList = (props) => {
   const completeTask = (id) => {
     props.onComplete(id);
   };
-  const addTask = (title, description) => {
-    props.onAdd(title, description);
-    console.log(title, description);
+  const addTask = (title, description, dueDate, priority) => {
+    props.onAdd(title, description, dueDate, priority);
+    //console.log(title, description);
   };
 
   return (
     <div className={styles.list}>
-      <NewTask onSubmit={addTask} />
-
       {props.tasks.map((task) => {
         return (
           <TaskItem
@@ -28,6 +26,7 @@ const TaskList = (props) => {
           ></TaskItem>
         );
       })}
+      <NewTask onSubmit={addTask} />
     </div>
   );
 };

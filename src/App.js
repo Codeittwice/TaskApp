@@ -3,12 +3,20 @@ import { useState } from "react";
 import TaskList from "./components/tasks/TaskList";
 import Header from "./components/navigation/Header";
 
+const Priorities = {
+  low: "low",
+  middle: "middle",
+  high: "high",
+};
+
 const DUMMY_TASKS = [
   {
     key: "t1",
     id: "t1",
     title: "Learn React",
     description: "Watch the course",
+    dueDate: new Date(2023, 7, 10).toDateString(),
+    priority: Priorities.low,
     completedStatus: false,
   },
   {
@@ -16,6 +24,8 @@ const DUMMY_TASKS = [
     id: "t2",
     title: "Learn JavaScript",
     description: "Watch the course",
+    dueDate: new Date(2023, 8, 1).toDateString(),
+    priority: Priorities.high,
     completedStatus: false,
   },
   {
@@ -23,6 +33,8 @@ const DUMMY_TASKS = [
     id: "t3",
     title: "Learn TypeScript",
     description: "Watch the course",
+    dueDate: new Date(2023, 6, 23).toDateString(),
+    priority: Priorities.middle,
     completedStatus: false,
   },
 ];
@@ -34,12 +46,14 @@ function App() {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
-  const addTask = (title, description) => {
+  const addTask = (title, description, dueDate, priority) => {
     const id = Math.random();
     const newTask = {
       id,
       title,
       description,
+      dueDate,
+      priority,
       completedStatus: false,
     };
     setTasks((oldTasks) => [...oldTasks, newTask]);
