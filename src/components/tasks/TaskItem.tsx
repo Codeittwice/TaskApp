@@ -36,7 +36,7 @@ const TaskItem = (props: any) => {
       <div className={detailsClasses}>
         <h1>{title}</h1>
       </div>
-      <div className={styles.completion}>
+      <div className={styles.buttons}>
         <button
           onClick={taskCompleteHandler}
           className={styles["complete-button"]}

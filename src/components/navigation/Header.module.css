@@ -25,6 +25,7 @@
   color: black;
   text-align: center;
   text-decoration: none;
+  display: block;
 }
 .active-link {
   color: black;

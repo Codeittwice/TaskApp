@@ -22,7 +22,7 @@ const TaskList = (props: any) => {
     dueDate: string,
     priority: Priorities
   ) => {
-    const id = "t" + (tasks.length + 1);
+    const id = "t" + Math.random() * 100; //(tasks.length + 1);
     const newTask = {
       id,
       title,

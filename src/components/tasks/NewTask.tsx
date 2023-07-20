@@ -10,7 +10,7 @@ import {
 import styles from "./NewTask.module.css";
 import Card from "../Card";
 import Modal from "../Modal";
-import { Pathnames } from "@/utils/enums";
+import { Pathnames, Priorities } from "@/utils/enums";
 
 const NewTask = (props: any) => {
   const defaultErrorMsg = "Please enter valid task information!";
@@ -25,7 +25,7 @@ const NewTask = (props: any) => {
   const title = useRef<HTMLInputElement>(null);
   const description = useRef<HTMLInputElement>(null);
   const date = useRef<HTMLInputElement>(null);
-  const priority = useRef<HTMLInputElement>(null);
+  const priority = useRef<HTMLSelectElement>(null);
 
   // useEffect(() => {
   //   if (overlay) {
@@ -131,14 +131,14 @@ const NewTask = (props: any) => {
                   type="text"
                   placeholder="Description"
                   ref={description}
-                ></input>
+                />
 
-                <input type="date" placeholder="Date" ref={date}></input>
-                <input
-                  type="text"
-                  placeholder="Priority"
-                  ref={priority}
-                ></input>
+                <input type="date" placeholder="Date" ref={date} />
+                <select name="priority" id="priority" ref={priority}>
+                  {Object.values(Priorities).map((prio) => {
+                    return <option value={prio}>{prio}</option>;
+                  })}
+                </select>
               </div>
               <div className={styles.submit}>
                 <button type="submit">Add New Task</button>
@@ -152,3 +152,5 @@ const NewTask = (props: any) => {
 };
 
 export default NewTask;
+
+//<input type="text" placeholder="Priority" ref={priority} />

@@ -42,6 +42,17 @@
   width: 20rem;
   max-width: 100%;
 }
+.new select {
+  display: flex;
+  text-align: center;
+  margin: auto;
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+}
 
 .submit {
   display: flex;
